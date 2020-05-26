@@ -14,25 +14,27 @@ import {
   View,
   Text,
   StatusBar,
-  Image,
 } from 'react-native';
-
+import Home from './src/screens/containers/home';
+import Header from './src/sections/components/header';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <View style={styles.body}>
-            <Image source={require('./assets/logo.png')} />
-            <Text>This is platzi video app</Text>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
+      <ScrollView
+        contentInsetAdjustmentBehavior="automatic"
+        style={styles.scrollView}>
+        <View style={styles.body}>
+          <Home>
+            <Header />
+            <Text>Buscador</Text>
+            <Text>Categorías</Text>
+            <Text>Sugerencias</Text>
+          </Home>
+        </View>
+      </ScrollView>
     </>
   );
 };
