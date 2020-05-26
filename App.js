@@ -7,42 +7,29 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import {StyleSheet, ScrollView, View, Text, StatusBar} from 'react-native';
 import Home from './src/screens/containers/home';
 import Header from './src/sections/components/header';
+import SuggestionList from './src/videos/containers/suggestion-list';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={styles.scrollView}>
-        <View style={styles.body}>
-          <Home>
-            <Header />
-            <Text>Buscador</Text>
-            <Text>Categorías</Text>
-            <Text>Sugerencias</Text>
-          </Home>
-        </View>
-      </ScrollView>
+      <View style={styles.body}>
+        <Home>
+          <Header />
+          <SuggestionList />
+          <Text>Categorías</Text>
+          <Text>Sugerencias</Text>
+        </Home>
+      </View>
     </>
   );
 };
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
   body: {
     backgroundColor: Colors.white,
   },
