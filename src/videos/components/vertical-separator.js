@@ -7,9 +7,7 @@ function VerticalSeparator(props) {
       style={[
         styles.separator,
         {borderTopColor: props.color ? props.color : '#eaeaea'},
-      ]}>
-      <Text>test</Text>
-    </View>
+      ]}></View>
   );
 }
 
