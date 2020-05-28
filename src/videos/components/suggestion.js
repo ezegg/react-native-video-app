@@ -7,8 +7,10 @@ function Suggestion(props) {
       <View style={styles.left}>
         <Image style={styles.cover} source={{uri: props.medium_cover_image}} />
         <View style={styles.genre}>
-          {props.genres.map((item) => (
-            <Text style={styles.genreText}>{item}</Text>
+          {props.genres.map((item, index) => (
+            <Text key={index} style={styles.genreText}>
+              {item}
+            </Text>
           ))}
         </View>
       </View>

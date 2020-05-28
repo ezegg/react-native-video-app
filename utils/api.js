@@ -7,6 +7,13 @@ class Api {
     const response = await query.json();
     return response.data.movies;
   }
+
+  async getCategories(id) {
+    const url = `${BASE_API}list_movies.json`;
+    const query = await fetch(url);
+    const response = await query.json();
+    return response.data.movies;
+  }
 }
 
 export default new Api();
