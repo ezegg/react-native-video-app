@@ -6,7 +6,9 @@ function Category(props) {
     <ImageBackground
       style={styles.container}
       source={{uri: props.background_image}}>
-      <Text style={styles.genre}>{props.genres[0]}</Text>
+      <Text style={styles.genre}>
+        {props.genres ? props.genres[0] : 'No category'}
+      </Text>
     </ImageBackground>
   );
 }
